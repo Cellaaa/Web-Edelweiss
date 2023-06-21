@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edelweiss</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+
+    <style>
+          @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Sofia+Sans&display=swap');
+
+          @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+          @import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background:  rgba(165,178,171,255);
+        }
+
+        .menu {
+            font-family: "Sofia sans";
+            font-weight: bold;
+            height: 65px;
+            width: 100%;
+            background: #3d5d52;
+            border-radius: 5px;
+            font-size: 18px;
+        
+        }
+
+        label {
+            font-family: "Dancing Script";
+            font-size: 20pt;
+            color:#fff;
+            margin: 10px;
+            padding: 5px;
+            float: left;
+        }
+
+        .menu ul {
+            margin: 0px;
+            padding: 0px;
+            background: none;
+            display: block;
+            float: right;
+        }
+
+        .menu ul li {
+            list-style: none;
+            display: inline-block;
+        }
+
+        .menu ul li a {
+           display: block;
+           text-decoration: none;
+           padding: 20px;
+           color: #ddd;
+        }
+
+        .menu ul li a:hover {
+            display: block;
+            color: whitesmoke;
+            background-color: #a5b2ab;
+            box-shadow: inset 0px 0px 5px #352e28;
+        }
+
+        .menu ul li .dropdown {
+            display: none;
+        }
+
+        .menu ul li:hover .dropdown{
+            display: block;
+            background-color: #3d5d52;
+            position: absolute;
+            z-index: 2;
+            padding: 10px;
+        }
+
+        .menu ul li:hover .dropdown li {
+            display: block;
+        }
+
+        .menu ul li:hover .dropdown li a {
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom:5px ;
+        }
+        .menu ul li:hover .dropdown li a:hover {
+            background: #3d5d52;
+            box-shadow: inset 0px 0px 5px;
+        }
+
+        section {
+            padding: 10px 15%;
+        }
+
+        .contact{
+            background: none;
+            height: 100%;
+            width: 100%;
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(2, 2fr);
+            align-items: center;
+            grid-gap: 6rem;
+            gap: 1.5rem;
+            padding-bottom: 40px;
+        }    
+
+        .container{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            margin-right: 200px;
+        }
+
+        .item{
+            width: 100%;
+            height: 550px;
+            max-width: 820px;
+            background: none;
+            border-radius: 20px;
+
+            grid-template-columns: repeat(2, 1fr);
+            display: grid;
+            z-index: 1000;
+        }
+
+        .submit-form{
+            background: none;
+        }
+
+        .container .contactInfo {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container .contactInfo .box {
+            position: relative;
+            padding: 20px 0;
+            display: flex;
+        }
+
+        .container .contactInfo .box .icon {
+            min-width: 60px;
+            height: 60px;
+            background: #6c8a7f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-size: 22px;
+        }
+
+        .contact-img img {
+            margin-top: 100px;
+            max-width: 100%;
+            width: 720px;
+            height: auto;
+            border-radius: 10px;
+            
+        }
+
+        .image {
+            height: 320px;
+            width: 320px;
+        }
+
+        .container .contactInfo .box .text {
+            display: flex;
+            margin-left: 20px;
+            font-size: 16px;
+            color: #fff;
+            flex-direction: column;
+        }
+
+        .contact-form h1 { 
+            font-size: 80px;
+            color: #fff;
+            margin-bottom: 20px;
+        } 
+
+        .contact-form2 h1 { 
+            font-size: 80px;
+            color: #fff;
+            margin-bottom: 220px;
+        } 
+
+        .contact-form h2 {
+            font-size: 5px;
+            color: #fff;
+            margin-bottom: 20px;
+        } 
+
+        .submit-form h2 {
+            font-size: 50px;
+            color: #fff;
+            margin-bottom: 20px;
+        } 
+
+        .first-text h2{
+            font-size: 35px;
+            color: #fff;
+            padding-left: 20px;
+            padding-top: 100px;
+            padding: -100px;
+        } 
+
+        span {
+            color: #000;
+        }
+
+        .contact-form p {
+            color: #333;
+            letter-spacing: 1px;
+            line-height: 20px;
+            font-size: 1rem;
+            margin-bottom: 3.8rem;
+        }
+
+        .submit-form form {
+            position: relative;
+        }
+
+        .submit-form form input,
+        form textarea {
+            width: 100%;
+            padding: 8px;
+            border: none;
+            outline: none;
+            background: #3d5d52;
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            border-radius: 5px;
+        }
+        .submit-form textarea {
+            resize: none;
+            height: 200px;
+        }
+        .submit-form form .btn {
+            display: inline;
+            background: #6c8a7f;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 600;
+            border: 2px solid transparent;
+            border-radius: 10px;
+            width: 220px;
+            transition: ease .20s;
+            cursor: pointer;
+        }
+
+
+        .submit-form form .btn:hover {
+            border: 2px solid #6c8a7f;
+            background: transparent;
+            transform: scale(1.1);
+        }
+
+        .map-form h2 {
+            font-size: 50px;
+            color: #fff;
+            margin-bottom: 20px;
+            text-align: center;
+            justify-content: center;
+        } 
+
+        .map iframe{
+            padding-left: 20px;
+            padding-right: 20px;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            justify-content: center;
+        }
+
+        
+
+.container-footer{
+    padding-top: 0;
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #24262b;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #3d5d52;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}.footer-bottom {
+    width: 100vw;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom span {
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+    </style>
+</head>
+<body>
+    <!-- Menu Bar -->
+    <nav class="menu">
+        <label>Edelweiss Jambi</label>
+        <ul class="dropdown">
+             <li><a href="index.html">Home</a></li>
+             <li><a href="about.html">About us</a></li>  
+             <li><a href="gift.html">Gifts</a>
+                <ul class="dropdown">
+                    <li><a href="gift.html">Acrylic</a></li>
+                    <li><a href="gift.html">Album</a></li>
+                    <li><a href="gift.html">Bouquet</a></li>
+                    <li><a href="gift.html">Hampers</a></li>                       
+                    <li><a href="gift.html">Scented candles</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Kontak</a></li>
+        </ul>   
+    </nav>
+    <!-- Section: Contact-->
+            <section class="contact">
+          <div class="contact-form">
+            <h1>Contact <span>Us</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident dignissimos consequuntur eum aspernatur incidunt!</p>
+            <div class="container">
+              <div class="contactInfo">
+                <div class="box">
+                  <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                  <div class="text">
+                    <h3>Address</h3>
+                    <p>Tungkal ulu, Tanjab</p>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                  <div class="text">
+                    <h3>Phone</h3>
+                    <p>+62** ** **</p>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                  <div class="text">
+                    <h3>E-mail</h3>
+                    <p>dugong4@gmail.com</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-img">
+            <img src="picture/rory-sally1.jpeg">
+          </div>
+        </section>
+
+        <div class="container">
+          <div class="item">
+            <div class="contact">
+              <div class="contact-form2">
+                <h1>Let's Get in Touch</h1>
+              </div>         
+            </div>
+            <div class="submit-form">
+              <div class="contact-form">
+                <h2>Leave A <span>Massage</span></h2>
+                <form action="">
+                  <input type="text" placeholder="Your Name" required>
+                  <input type="email" name="email" id="" placeholder="E-mail" required>
+                  <input type="text" placeholder="Write a Subject" required>
+                  <textarea name="" id="" cols="30" rows="10" placeholder="Your Massage" required></textarea>
+                  <input type="submit" name="" value="Submit" class="btn">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="map">
+          <div class="map-form">
+            <h2>Our Location</h2>
+          </div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15920932.022701088!2d101.490104!3d13.039090499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304d8df747424db1%3A0x9ed72c880757e802!2sThailand!5e0!3m2!1sid!2sid!4v1686378388666!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        
+        <footer class="footer">
+            <div class="container-footer">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>About Us</h4>
+                        <ul>
+                            <li><a href="#">Tungkal Ulu, Tanjab</a></li>
+                            <li><a href="#">Telephone: (+62)** ** **</a></li>
+                            <li><a href="#">Email: dugong4@gmail.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Information</h4>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="#">Our Services</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Alfiliate Program</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>online shop</h4>
+                        <ul>
+                           
+                            <li><a href="gift.html">Bouquete</a></li>
+                            <li><a href="gift.html">Hampers</a></li>
+                           <li><a href="gift.html">Acrylic</a></li>
+                           <li><a href="gift.html">Scented Candle</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>follow us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-tiktok"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </footer>
+
+</body>
+</html>

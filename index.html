@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edelweiss Gift Shop Jambi</title>
+    <!--Link CSS-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>    
+</head>
+
+
+<body id="home">
+
+
+        <!--menu bar-->
+        <nav class="menu">
+            <label>Edelweiss Jambi</label>
+            <ul class="dropdown">
+                 <li><a href="#">Home</a></li>
+                 <li><a href="about.html">About us</a></li>  
+                 <li><a href="gift.html">Gifts</a>
+                    <ul class="dropdown">
+                        <li><a href="gift.html">Acrylic</a></li>
+                        <li><a href="gift.html">Bouquet</a></li>
+                        <li><a href="gift.html">Hampers</a></li>                       
+                        <li><a href="gift.html">Scented candles</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="contact.html">Kontak</a></li>
+            </ul>   
+        </nav>
+
+        <!--Header-->
+        <header id="showcase">
+            <div class="showcase-content">
+                 <h1 class="l-heading">Edelweiss</h1>
+                 <h3 class="lead">
+                 Handmade Gifts For You and Beloved Person
+                </h3>
+                
+                    <h3 class="desc-title">
+                        Edelweiss is an online shop that provides inspirational gifts for your loved ones.
+                    </h3>
+                
+                <a href="gift.html" class="btn-title">Get Your Gift Here</a>
+                </div>
+            </div>
+        </header>
+
+        <div class="title">
+            <h1>Our Partners</h1>
+        </div>
+        <div class="partner-container">
+            <section class="partner-logos slider">
+                <div class="slide pic"><img src="picture/fix10.png" alt="logo"></div>
+                <div class="slide pic"><img src="picture/fix11.png" alt="logo"></div>
+                <div class="slide pic"><img src="picture/fix12.png" alt="logo"></div>
+                <div class="slide pic"><img src="picture/fix13.png" alt="logo"></div>
+                <div class="slide pic"><img src="picture/fix11.png" alt="logo"></div>
+                <div class="slide pic"><img src="picture/fix10.png" alt="logo"></div>
+                <div class="slide pic"><img src="picture/fix12.png" alt="logo"></div>
+                <div class="slide pic"><img src="picture/fix13.png" alt="logo"></div>
+        </section>
+        </div>
+        <script>
+    
+            $(document).ready(function(){
+                $('.partner-logos').slick({
+                    slidesToShow: 6,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 1500,
+                    arrows: false,
+                    dots: false,
+                    pauseOnHover:false,
+                    responsive: [{
+                        breakpoint: 768,
+                        setting: {
+                            slidesToShow:4
+                        }
+                    }, {
+                        breakpoint: 520,
+                        setting: {
+                            slidesToShow: 3
+                        }
+                    }]
+                });
+            });
+        
+            </script>
+        
+        <!--Section: Services-->
+            <section class="services-section">
+                <div class="innerwidth">
+                    <h1 class="section-title">Why Choose <span>Edelweiss?</span></h1>
+                    <div class="services-border"></div>
+                    <div class="services-container">
+                        <div class="services-box">
+                            <div class="services-icon">
+                                <i class="fa-solid fa-truck-fast"></i>
+                            </div>
+                            <div class="service-title">Shipping</div>
+                            <div class="service-desc">
+                                Shipping will be done as soon as the products done.
+                            </div>
+                        </div>
+
+                        <div class="services-box">
+                            <div class="services-icon">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="service-title">Secure</div>
+                            <div class="service-desc">
+                                Products are secured until arrived at destination. No more payment needed.
+                            </div>
+                        </div>
+
+                        <div class="services-box">
+                            <div class="services-icon">
+                                <i class="fa-solid fa-list-check"></i>
+                            </div>
+                            <div class="service-title">Order By Requests</div>
+                            <div class="service-desc">
+                                All requests are going to be noted and made.
+                            </div>
+                        </div>
+
+                        <div class="services-box">
+                            <div class="services-icon">
+                                <i class="fa-solid fa-gift"></i>
+                            </div>
+                            <div class="service-title">Ready Sample</div>
+                            <div class="service-desc">
+                                Make it easy to get product visualization as part of the product.
+                            </div>
+                        </div>
+
+                        <div class="services-box">
+                            <div class="services-icon">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div class="service-title">On Time</div>
+                            <div class="service-desc">
+                                Work and delivery according to the schedule set for your benefit.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        <!--Section: Our Products-->
+        <section class="f-products">
+            <div class="title2">
+                <center><h1>Our Products</h1></center>
+            </div>
+
+            <div class="wrapper">
+                    <div class="card">
+                        <img src="picture/card2.jpeg">
+                        <div class="info"> 
+                            <h2>Hampers</h2>
+                            <p class="desc">A package filled with care set, snack, or anything by request.</p>
+                            <a href="gift.html" class="btn">Read More</a>
+                        </div>
+                    </div>   
+                    
+                    <div class="card">
+                        <img src="picture/card1.jpeg">
+                        <div class="info"> 
+                            <h2>Acrylics</h2>
+                            <p class="desc">Display massege for greetings, graduations, or weddings.</p>
+                            <a href="gift.html" class="btn">Read More</a>
+                        </div>
+                    </div>  
+        
+                    <div class="card">
+                        <img src="picture/card3.jpeg">
+                        <div class="info"> 
+                            <h2>Bouquete</h2>
+                            <p class="desc">Snack and Flower arrangements based on request. </p>
+                            <a href="gift.html" class="btn">Read More</a>
+                        </div>      
+                    </div>  
+        
+                    <div class="card">
+                        <img src="picture/card4.jpeg">
+                        <div class="info"> 
+                            <h2>Scented Candle</h2>
+                            <p class="desc">Candles with calming scents to soothe your day. </p>
+                            <a href="gift.html" class="btn">Read More</a>
+                        </div>
+                    </div>     
+            </div>
+
+            <div class="judul-produk">
+                <h2 class="HM" >Hampers</h2>           
+                <h2 class="AC">Acrylics</h2>           
+                <h2 class="BO">Bouquete</h2>           
+                <h2 class="SC">Scented Candle</h2>           
+
+            </div>
+        </section>
+        <div>
+        </div>
+        
+        <footer class="footer">
+            <div class="container-footer">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>About Us</h4>
+                        <ul>
+                            <li><a href="#">Tungkal Ulu, Tanjab</a></li>
+                            <li><a href="#">Telephone: (+62)** ** **</a></li>
+                            <li><a href="#">Email: dugong4@gmail.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Information</h4>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="#">Our Services</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Alfiliate Program</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>online shop</h4>
+                        <ul>
+                           
+                            <li><a href="gift.html">Bouquete</a></li>
+                            <li><a href="gift.html">Hampers</a></li>
+                           <li><a href="gift.html">Acrylic</a></li>
+                           <li><a href="gift.html">Scented Candle</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>follow us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-tiktok"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </footer>
+       
+
+
+        
+       
+
+</body>
+</html>
